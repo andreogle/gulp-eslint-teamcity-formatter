@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('path');
+module.exports = require('./src/formatter');
