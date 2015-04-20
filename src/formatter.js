@@ -38,8 +38,7 @@ var reportName = 'ESLint Violations';
 
 module.exports = function(results) {
 
-  var output = '',
-      summaryColor = 'yellow';
+  var output = '';
 
   output += '##teamcity[testSuiteStarted name=\'' + reportName + '\']\n';
 
@@ -50,23 +49,28 @@ module.exports = function(results) {
       return;
     }
 
-    output += '##teamcity[testStarted name=\'' + reportName + ':' +
+    output += '##teamcity[testStarted name=\'' + reportName + ': ' +
                escapeTeamCityString(result.filePath) + '\']\n';
 
     var messageList = [];
 
     messages.forEach(function(message) {
       if (message.severity === 2) {
-        messageList.push('line ' + message.line + ', col ' + message.column + ', ' + message.message);
+        messageList.push(
+          'line ' + message.line +
+          ', col ' + message.column + ', ' + message.message
+        );
       }
     });
 
     if (messageList.length) {
-      output += '##teamcity[testFailed name=\'' + reportName +
-        ': ' + escapeTeamCityString(result.filePath) + '\' message=\'' + escapeTeamCityString(messageList.join('\n')) + '\']\n';
+      output += '##teamcity[testFailed name=\'' + reportName + ': ' +
+        escapeTeamCityString(result.filePath) + '\' message=\'' +
+        escapeTeamCityString(messageList.join('\n')) + '\']\n';
     }
 
-    output += '##teamcity[testFinished name=\'' + reportName + ': ' + escapeTeamCityString(result.filePath) + '\']\n';
+    output += '##teamcity[testFinished name=\'' + reportName + ': ' +
+      escapeTeamCityString(result.filePath) + '\']\n';
   });
 
   output += '##teamcity[testSuiteFinished name=\'' + reportName + '\']\n';
