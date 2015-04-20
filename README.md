@@ -27,13 +27,20 @@ gulp.task('lint', function () {
 });
 ```
 See the [gulp-eslint](https://github.com/adametry/gulp-eslint#usage) docs for
-more info on setting up gulp-eslint.
+more info on setting up a linting task.
+
+Then setup a TeamCity build setup, similar to the below step:
+
+![Example TeamCity Setup](https://raw.githubusercontent.com/andreogle/gulp-eslint-teamcity-formatter/master/raw/buildstep-example.jpg)
+
+Run a new build, by deploying  again, and you should see your build errors!
 
 ## Screenshot
 
-![Example TeamCity Output](http://github.com/andreogle/gulp-eslint-teamcity-formatter/raw/example.jpg?raw=true "Example Output")
+![Example TeamCity Output](https://raw.githubusercontent.com/andreogle/gulp-eslint-teamcity-formatter/master/raw/example.jpg)
 
 ## Issues
 
 I will try keep this project up to date, but please log any issues
-[here](https://github.com/andreogle/gulp-eslint-teamcity-formatter/issues)
+[here](https://github.com/andreogle/gulp-eslint-teamcity-formatter/issues).
+Any pull requests are also welcome!
