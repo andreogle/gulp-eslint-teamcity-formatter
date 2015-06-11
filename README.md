@@ -1,4 +1,5 @@
 # gulp-eslint-teamcity-formatter
+[![npm version](https://badge.fury.io/js/gulp-eslint-teamcity-formatter.svg)](http://badge.fury.io/js/gulp-eslint-teamcity-formatter)
 
 > A small [gulp-eslint](https://github.com/adametry/gulp-eslint) formatter plugin.
 ESLint violations are output nicely in the
@@ -31,13 +32,13 @@ more info on setting up a linting task.
 
 Then setup a TeamCity build setup, similar to the below step:
 
-![Example TeamCity Setup](https://raw.githubusercontent.com/andreogle/gulp-eslint-teamcity-formatter/master/raw/buildstep-example.jpg)
+![Example TeamCity Setup](https://i.imgur.com/j7qMSYg.jpg)
 
 Run a new build, by deploying  again, and you should see your build errors!
 
 ## Screenshot
 
-![Example TeamCity Output](https://raw.githubusercontent.com/andreogle/gulp-eslint-teamcity-formatter/master/raw/example.jpg)
+![Example TeamCity Output](https://i.imgur.com/DkwEPEN.jpg)
 
 ## Issues
 
