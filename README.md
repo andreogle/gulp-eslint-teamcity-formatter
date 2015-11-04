@@ -5,43 +5,6 @@
 ESLint violations are output nicely in the
 [TeamCity](https://www.jetbrains.com/teamcity/) build error format.
 
-## Installation
-
-[Use npm](https://docs.npmjs.com/cli/install).
-
-```sh
-npm install gulp-eslint-teamcity-formatter --save-dev
-```
-
-## Usage
-
-```javascript
-var gulp = require('gulp'),
-    eslint = require('gulp-eslint'),
-    teamcityReporter = require('gulp-eslint-teamcity-formatter');
-
-gulp.task('lint', function () {
-    return gulp.src(['js/**/*.js'])
-        .pipe(eslint())
-        .pipe(eslint.format(teamcityReporter))
-        .pipe(eslint.failAfterError());
-});
-```
-See the [gulp-eslint](https://github.com/adametry/gulp-eslint#usage) docs for
-more info on setting up a linting task.
-
-Then setup a TeamCity build setup, similar to the below step:
-
-![Example TeamCity Setup](https://i.imgur.com/j7qMSYg.jpg)
-
-Run a new build, by deploying  again, and you should see your build errors!
-
-## Screenshot
-
-![Example TeamCity Output](https://i.imgur.com/DkwEPEN.jpg)
-
-## Issues
-
-I will try keep this project up to date, but please log any issues
-[here](https://github.com/andreogle/gulp-eslint-teamcity-formatter/issues).
-Any pull requests are also welcome!
+# Deprecation Notice
+Please note that this project has been deprecated and will not be developed further. It has been renamed
+[eslint-teamcity](https://github.com/andreogle/eslint-teamcity)
